@@ -361,6 +361,7 @@ debug("$lcov_version\n");
 
 if (0 == scalar(@gcov_tool)) {
     # not specified - use gcov by default - expected to be in user's path
+    push(@gcov_tool, 'llvm-cov');
     push(@gcov_tool, 'gcov');
 } else {
     my $tool = $gcov_tool[0];
